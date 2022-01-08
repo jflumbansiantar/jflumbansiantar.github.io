@@ -27,7 +27,7 @@
     "sweetalert2": "^10.6.1",
     "yup": "^0.29.3"
   },
-  "homepage": "https://github.com/jflumbansiantar/jflumbansiantar.github.io",
+  "homepage": "https://jflumbansiantar.github.io",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
