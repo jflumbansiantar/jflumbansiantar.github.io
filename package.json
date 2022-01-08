@@ -1,0 +1,24 @@
+{
+  "name": "jflumbansiantar.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jflumbansiantar/jflumbansiantar.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jflumbansiantar/jflumbansiantar.github.io/issues"
+  },
+  "homepage": "https://github.com/jflumbansiantar/jflumbansiantar.github.io#readme",
+  "dependencies": {
+    "gh-pages": "^3.2.3"
+  }
+}
