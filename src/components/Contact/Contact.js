@@ -37,7 +37,7 @@ export default function Contact(){
                 marginHeight={0}
                 marginWidth={0}
                 style={{ filter: "opacity(0.7)" }}
-                src="https://www.google.com/maps/embed/v1/place?q=97+warren+st+new+york+city&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15867.70358606136!2d106.8319951!3d-6.1406569!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a1e189663ab5d%3A0xee2cc9cf837ff09a!2sPademangan%2C%20North%20Jakarta%20City%2C%20Jakarta!5e0!3m2!1sen!2sid!4v1642085445974!5m2!1sen!2sid"
               />
               <div className="bg-gray-900 relative flex flex-wrap py-6 rounded shadow-md">
                 <div className="lg:w-1/2 px-6">
@@ -55,51 +55,34 @@ export default function Contact(){
                   <a className="text-indigo-400 leading-relaxed">
                     jflumbansiantar@gmail.com
                   </a>
-                  <h2 className="title-font font-semibold text-white tracking-widest text-xs mt-4">
-                    PHONE
-                  </h2>
-                  <p className="leading-relaxed">+62-856-6827-9796</p>
                 </div>
               </div>
             </div>
-            <form
-              netlify
-              name="contact"
-              className="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
+            <form netlify name="contact" className="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
               <h2 className="text-white sm:text-4xl text-3xl mb-1 font-medium title-font">
-                Hire Me
+                Get to Know Me
               </h2>
               <p className="leading-relaxed mb-5">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum
-                suscipit officia aspernatur veritatis. Asperiores, aliquid?
+                If you want to get to know me more, let's have a chat!
               </p>
               <div className="relative mb-4">
                 <label htmlFor="name" className="leading-7 text-sm text-gray-400">
                   Name
                 </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                <input type="text" id="name" name="name" 
+                className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
               <div className="relative mb-4">
                 <label htmlFor="email" className="leading-7 text-sm text-gray-400">
                   Email
                 </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
+                <input  type="email"  id="email"  name="email"
                   className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
               <div className="relative mb-4">
-                <label
-                  htmlFor="message"
-                  className="leading-7 text-sm text-gray-400">
-                  Message
+                <label htmlFor="message" className="leading-7 text-sm text-gray-400"> Message
                 </label>
                 <textarea
                   id="message"
