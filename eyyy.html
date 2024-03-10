@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    .selector-for-some-widget {
+        box-sizing: content-box;
+    }
+    .dark-mode {
+        background-color: black;
+        color: white;
+    }
+    .light-mode {
+        background-color: white;
+        color: black;
+    }
+    .search-box {
+        margin: 10px;
+        background-color: aquamarine;
+        text-align: center;
+    }
+    .legend {
+        background-color: darkgrey;
+        text-align: center;
+    }
+    .body-card{
+        position: absolute;
+        
+    }
+    .header-card{
+        margin: 0 auto;
+        
+    }
+    .breadcrumb{
+        margin: 10px;
+    }
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
+
+    .switch input { 
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    input:checked + .slider {
+        background-color: #2196F3;
+    }
+
+    input:focus + .slider {
+        box-shadow: 0 0 1px #2196F3;
+    }
+
+    input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+
+    /* Rounded sliders */
+    .slider.round {
+        border-radius: 34px;
+    }
+
+    .slider.round:before {
+        border-radius: 50%;
+    }
+</style>
+<head>
+        <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <title>Jul's</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card header-card">
+            <nav class="nav" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item active" aria-current="page">Home</li>
+                </ol>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item active" aria-current="page">Home 1</li>
+                </ol>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item active" aria-current="page">Home 2</li>
+                </ol>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item active" aria-current="page">Home 3</li>
+                </ol>
+                <label class="switch" name="switchMode">
+                    <input type="checkbox" value="1"  onchange="switchMode(this)">
+                    <span class="slider round"></span>
+                  </label>
+            </nav>
+        </div>
+        <div class="card body-card">
+            <div class="card-body">
+                <div class="input-group mb-3 search-box">
+                    <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Search here</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Hello">
+                </div>
+                <div>
+                    <p>* You can search something here</p>
+                </div>
+            </div>
+        </div>
+        <div class="card footer-card"></div>
+    </div>
+    <!-- <button onclick="darkMode()">Darkmode</button>
+    <button onclick="lightMode()">LightMode</button> -->
+    
+    
+</body>
+<script src="script.js"></script>
+<script>
+    function switchMode(t) {
+        t.checked == true ? darkMode() : lightMode();
+    }
+
+    function darkMode() {
+        let element = document.body;
+        let content = document.getElementById("DarkModetext");
+        element.className = "dark-mode";
+        let cards = document.getElementsByClassName("card")
+        for (let i = 0; i < cards.length; i++) {
+            const el = cards[i];
+            el.style.backgroundColor = "black";
+        }
+    }
+
+    function lightMode() {
+        let element = document.body;
+        let content = document.getElementById("DarkModetext");
+        element.className = "light-mode";
+        let cards = document.getElementsByClassName("card")
+        for (let i = 0; i < cards.length; i++) {
+            const el = cards[i];
+            el.style.backgroundColor = "white";
+        }
+    }
+</script>
+</html>
